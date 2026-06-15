@@ -1,7 +1,7 @@
 //
         //
     //  Project: Encore
-    //  File: EncoreApp.swift
+    //  File: Show.swift
     //  Created by Noah Carpenter 
     //
     //  📺 YouTube: Noah Does Coding
@@ -12,13 +12,22 @@
 
     
 
-import SwiftUI
+import Foundation
 
-@main
-struct EncoreApp: App {
-    var body: some Scene {
-        WindowGroup {
-            AttendedView()
-        }
-    }
+enum ShowStatus {
+    case attended
+    case upcoming
+    
+}
+
+
+struct Show: Identifiable {
+    
+    var artistName: String
+    var venueName: String
+    var city: String
+    var date: Date
+    var status: ShowStatus
+    
+    let id = UUID()
 }
