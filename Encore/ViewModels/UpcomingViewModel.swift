@@ -1,7 +1,7 @@
 //
         //
     //  Project: Encore
-    //  File: AttendedViewModel.swift
+    //  File: UpcomingViewModel.swift
     //  Created by Noah Carpenter 
     //
     //  📺 YouTube: Noah Does Coding
@@ -11,25 +11,20 @@
     //
 
     
-
 import Foundation
 import SwiftData
 
 @Observable
-final class AttendedViewModel {
-    var searchText = ""
+final class UpcomingViewModel {
     var showingAddSheet = false
     
     func filteredShows(_ shows: [Show]) -> [Show] {
-        let attended = shows.filter({ $0.status == .attended })
-        guard !searchText.isEmpty else { return attended }
-        return attended.filter {
-            $0.artistName.localizedCaseInsensitiveContains(searchText) || $0.venueName.localizedCaseInsensitiveContains(searchText) || $0.city.localizedCaseInsensitiveContains(searchText)
-        }
+        shows
+            .filter { $0.status == .upcoming }
+            .sorted { $0.date < $1.date }
     }
     
     func delete(_ show: Show, context: ModelContext) {
         context.delete(show)
     }
-    
 }
