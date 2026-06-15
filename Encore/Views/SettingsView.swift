@@ -1,7 +1,7 @@
 //
         //
     //  Project: Encore
-    //  File: EncoreApp.swift
+    //  File: SettingsView.swift
     //  Created by Noah Carpenter 
     //
     //  📺 YouTube: Noah Does Coding
@@ -13,14 +13,13 @@
     
 
 import SwiftUI
-import SwiftData
 
-@main
-struct EncoreApp: App {
-    var body: some Scene {
-        WindowGroup {
-            MainTabView()
-        }
-        .modelContainer(for: Show.self)
+struct SettingsView: View {
+    var body: some View {
+        Text("Settings")
     }
+}
+
+#Preview {
+    SettingsView()
 }
