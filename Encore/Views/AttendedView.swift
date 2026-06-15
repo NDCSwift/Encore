@@ -13,9 +13,12 @@
     
 
 import SwiftUI
+import SwiftData
+
 
 struct AttendedView: View {
-    @State private var shows: [Show] = []
+    @Query private var shows: [Show]
+    @Environment(\.modelContext) private var modelContext
     var body: some View {
 
         NavigationStack {
@@ -26,7 +29,7 @@ struct AttendedView: View {
             .navigationTitle("Attended")
             .toolbar{
                 Button("Add show!", systemImage: "plus") {
-                    shows.append(Show(artistName: "Radiohead", venueName: "Madison Square Garden", city: "New York", date: .now, status: .attended))
+                    modelContext.insert(Show(artistName: "Radiohead", venueName: "Madison Square Garden", city: "New York", date: .now, status: .attended))
                 }
             }
         }
@@ -37,4 +40,5 @@ struct AttendedView: View {
 
 #Preview {
     AttendedView()
+        .modelContainer(for: Show.self, inMemory: true)
 }
