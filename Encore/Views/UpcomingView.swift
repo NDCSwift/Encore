@@ -34,6 +34,12 @@ struct UpcomingView: View {
                                 ShowRowView(show: show)
                             }
                             
+                            .swipeActions(edge: .leading) {
+                                Button("Attend"){
+                                    viewModel.showToMarkAttended = show
+                                }
+                                .tint(.green)
+                            }
                         }
                         .onDelete {
                             indexSet in
@@ -61,6 +67,11 @@ struct UpcomingView: View {
             .sheet(isPresented: $vm.showingAddSheet) {
                 AddEditShowView(initialStatus: .upcoming)
             }
+            .sheet(item: $vm.showToMarkAttended) {
+                show in
+                MarkAttendedSheet(show: show, viewModel: viewModel)
+            }
+            
         }
         
     }

@@ -17,6 +17,8 @@ import SwiftData
 @Observable
 final class UpcomingViewModel {
     var showingAddSheet = false
+    var showToMarkAttended: Show?
+    var pendingRating = 0
     
     func filteredShows(_ shows: [Show]) -> [Show] {
         shows
@@ -26,5 +28,12 @@ final class UpcomingViewModel {
     
     func delete(_ show: Show, context: ModelContext) {
         context.delete(show)
+    }
+    
+    func markAsAttended(_ show: Show) {
+        show.status = .attended
+        show.rating = pendingRating > 0 ? pendingRating : nil
+        pendingRating = 0
+        showToMarkAttended = nil
     }
 }
