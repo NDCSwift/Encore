@@ -61,7 +61,7 @@ struct AttendedView: View {
                 }
             }
             .sheet(isPresented: $vm.showingAddSheet) {
-                AddEditShowView()
+                AddEditShowView(initialStatus: .attended)
             }
         }
         

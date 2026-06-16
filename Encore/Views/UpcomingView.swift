@@ -59,7 +59,7 @@ struct UpcomingView: View {
                 }
             }
             .sheet(isPresented: $vm.showingAddSheet) {
-                AddEditShowView()
+                AddEditShowView(initialStatus: .upcoming)
             }
         }
         
