@@ -37,7 +37,7 @@ No third-party dependencies — everything is first-party Apple frameworks.
 ## Getting started
 
 ```bash
-git clone [<this-repo>](https://github.com/NDCSwift/Encore.git    )
+git clone https://github.com/NDCSwift/Encore.git
 cd Encore
 open Encore.xcodeproj
 ```
