@@ -119,6 +119,38 @@ The course closes by pointing to these natural follow-ons:
 
 ---
 
+## Go further
+
+Want to drill deeper into any concept from the course? Each topic below has its own focused video + repo on the [NoahDoesCoding YouTube channel](https://www.youtube.com/@NoahDoesCoding) — clone, run, and dig in.
+
+### Deepen a chapter
+
+| Encore chapter | Focused tutorial | Repo | Video |
+|---|---|---|---|
+| Ch 2 — SwiftData | Task Tracker — SwiftData persistence from scratch | [TaskTracker](https://github.com/NDCSwift/TaskTracker-2026SwiftUITutorial) | [Watch](https://youtu.be/ayn9CdqbI_Y) |
+| Ch 3 — Navigation & Tabs | `NavigationStack` + `TabView` together | [SwiftUInavigationTabViewExample2](https://github.com/NDCSwift/SwiftUInavigationTabViewExample2) | [Watch](https://youtu.be/m8KvqS7VMZs) |
+| Ch 4 — Lists & Live Data | `List` + `ForEach`, rows, swipe & deletion | [List_ForEach](https://github.com/NDCSwift/List_ForEach) | [Watch](https://youtu.be/aUtXo0VTxE8) |
+| Ch 5 — Forms & Validation | Real-time form validation & submit gating | [FormValidator](https://github.com/NDCSwift/FormValidator) | [Watch](https://youtu.be/X6KXdmcjuCU) |
+| Ch 8 — Onboarding gate | `@AppStorage` persistence deep dive | [SwiftUI-AppStorageExample](https://github.com/NDCSwift/SwiftUI-AppStorageExample) | [Watch](https://youtu.be/ioKgvLOGuK8) |
+| Ch 8 — Permissions | Local notifications + permission requests | [LocalNotificationExampleSwiftUI](https://github.com/NDCSwift/LocalNotificationExampleSwiftUI) | [Watch](https://youtu.be/yTtB5eKrahM) |
+| Ch 9 — Stats | Swift Charts — bar, line & area charts | [ChartKitExample](https://github.com/NDCSwift/ChartKitExample) | [Watch](https://youtu.be/nz9SOol9czw) |
+| Ch 10 — Empty states | `ContentUnavailableView` — every empty state | [ContentUnavailableView_SwiftUI](https://github.com/NDCSwift/ContentUnavailableView_SwiftUI) | [Watch](https://youtu.be/FeNIGjSpaCo) |
+| Ch 11 — App icon | Liquid Glass icons with Icon Composer | [MonkeyAppIconExample](https://github.com/NDCSwift/MonkeyAppIconExample) | [Watch](https://youtu.be/srOFdUvRmsc) |
+
+### Beyond the course
+
+The "Where to go next" topics above, each as a standalone build:
+
+| Topic | Repo | Video |
+|---|---|---|
+| iCloud sync with SwiftData + CloudKit | [CloudKitDemo](https://github.com/NDCSwift/CloudKitDemo) | [Watch](https://youtu.be/rtlVb6aazFg) |
+| In-app purchases with StoreKit 2 | [StoreKitDemo](https://github.com/NDCSwift/StoreKitDemo) | [Watch](https://youtu.be/BI-ohzQ7GuI) |
+| WidgetKit — home screen widgets w/ live data | [CatFactsWidgets](https://github.com/NDCSwift/CatFactsWidgets) | [Watch](https://youtu.be/KalCtyjgfRc) |
+| API integration — async/await + Codable | [SwiftUIAPIExampleOpen-Meteo](https://github.com/NDCSwift/SwiftUIAPIExampleOpen-Meteo) | [Watch](https://youtu.be/hvjqUuhmNZQ) |
+| On-device AI — Apple FoundationModels | [FoundationModels_SwiftUI](https://github.com/NDCSwift/FoundationModels_SwiftUI) | [Watch](https://youtu.be/GuOzhtChwT8) |
+
+---
+
 ## License
 
 See [LICENSE](LICENSE) if present, otherwise this code is provided as-is for educational use alongside the video.
