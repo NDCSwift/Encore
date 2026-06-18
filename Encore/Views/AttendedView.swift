@@ -27,7 +27,7 @@ struct AttendedView: View {
         NavigationStack {
             Group {
                 if viewModel.filteredShows(allShows).isEmpty {
-                   ContentUnavailableView("No Results", systemImage: "magnifyingglass")
+                    EmptyStateView(icon: "music.mic", title: viewModel.searchText.isEmpty ? "No Shows Yet" : "No Results", message: viewModel.searchText.isEmpty ? "Start logging for the concerts you've been to" : "Try Searching for something else")
                 }
                 else {
                    
