@@ -28,7 +28,7 @@ A complete, single-target iOS app with:
 
 - **Xcode 26** or later
 - **iOS 26** deployment target
-- Tested on the **iPhone 16 Pro** simulator (light mode)
+- Tested on the **iPhone 17** simulator (light mode)
 
 No third-party dependencies — everything is first-party Apple frameworks.
 
@@ -37,9 +37,9 @@ No third-party dependencies — everything is first-party Apple frameworks.
 ## Getting started
 
 ```bash
-git clone <this-repo>
+git clone [<this-repo>](https://github.com/NDCSwift/Encore.git    )
 cd Encore
-open Encore.xcodeproj   # or .xcworkspace
+open Encore.xcodeproj
 ```
 
 Press **⌘R** to run. To follow along with a specific lesson, check out that chapter's tag (see below).
