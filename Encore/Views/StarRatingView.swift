@@ -14,6 +14,7 @@
 
 import SwiftUI
 
+/// Interactive 1–5 star picker. Tapping the currently selected star deselects it (resets to 0).
 struct StarRatingView: View {
     @Binding var rating: Int
     private let maxRating = 5
@@ -22,7 +23,7 @@ struct StarRatingView: View {
             ForEach(1 ... maxRating, id: \.self){ star in
                 Button {
                     withAnimation(.spring(response: 0.5)) {
-                        rating = rating == star ? 0 : star
+                        rating = rating == star ? 0 : star // toggle off: tapping the active star clears the rating
                     }
                 }
                 label : {

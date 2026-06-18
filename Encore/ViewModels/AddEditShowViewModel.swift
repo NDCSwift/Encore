@@ -16,9 +16,10 @@ import SwiftData
 import Foundation
 
 
+/// Backing state for AddEditShowView. Handles both creating new shows and editing existing ones.
 @Observable
 final class AddEditShowViewModel {
-    
+
     var artistName = ""
     var venumeName = ""
     var city = ""
@@ -28,12 +29,14 @@ final class AddEditShowViewModel {
     var notes = ""
     var setlist: [String] = []
     var newSetlistEntry = ""
-    
+
+    // Requires at least artist and venue before saving
     var isValid: Bool {
         !artistName.trimmingCharacters(in: .whitespaces).isEmpty &&
         !venumeName.trimmingCharacters(in: .whitespaces).isEmpty
     }
     
+    // When editing, populates from the existing show; when creating, sets sensible date defaults per status
     init(show: Show? = nil, initialStatus: ShowStatus = .upcoming){
         if let show {
             artistName = show.artistName
@@ -58,6 +61,7 @@ final class AddEditShowViewModel {
         newSetlistEntry = ""
     }
     
+    // Updates in place if editing, inserts a new model if creating
     func save(to context: ModelContext, existing show: Show? = nil) {
         if let show {
             show.artistName = artistName

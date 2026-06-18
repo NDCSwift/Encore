@@ -14,6 +14,7 @@
 
 import SwiftUI
 
+/// Reusable template for a single onboarding slide (icon, title, description).
 struct OnboardingPageView: View {
     let icon: String
     let color: Color

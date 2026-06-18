@@ -15,13 +15,15 @@
 import SwiftUI
 import SwiftData
 
+/// Form for creating a new show or editing an existing one. Adapts its title and fields based on whether a show is passed in.
 struct AddEditShowView: View {
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @State private var viewModel: AddEditShowViewModel
-    
+
     let existingShow: Show?
-    
+
+    // ViewModel is initialized here so it can receive the show before body renders
     init(show: Show? = nil, initialStatus: ShowStatus = .upcoming) {
         self.existingShow = show
         self._viewModel = State(initialValue: AddEditShowViewModel(show: show, initialStatus: initialStatus))

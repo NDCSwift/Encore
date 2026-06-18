@@ -15,12 +15,14 @@
 import SwiftUI
 import SwiftData
 
+/// Full detail view for a show. Uses @Bindable so rating and setlist edits write directly through to SwiftData.
 struct ShowDetailView: View {
     @Bindable var show: Show
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
     @State private var showingEditSheet = false
     @State private var showingDeleteAlert = false
+    // Local state for the inline add-song field; not part of the show model until committed
     @State private var newSetlistEntry = ""
     var body: some View {
         

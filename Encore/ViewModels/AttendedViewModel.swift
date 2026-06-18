@@ -15,11 +15,13 @@
 import Foundation
 import SwiftData
 
+/// Manages filtered display and deletion for the Attended tab.
 @Observable
 final class AttendedViewModel {
     var searchText = ""
     var showingAddSheet = false
-    
+
+    // Filters to attended-only, then applies search text across artist, venue, and city
     func filteredShows(_ shows: [Show]) -> [Show] {
         let attended = shows.filter({ $0.status == .attended })
         guard !searchText.isEmpty else { return attended }

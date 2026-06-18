@@ -15,6 +15,7 @@
 import SwiftUI
 import SwiftData
 
+/// App entry point. Routes to onboarding or the main tab interface based on AppStorage.
 @main
 struct EncoreApp: App {
     

@@ -15,6 +15,7 @@
 import SwiftUI
 import UserNotifications
 
+/// Final onboarding page that requests notification permissions. Binding lets OnboardingView track whether permission was requested.
 struct OnboardingNotificationsPage: View {
     @Binding var notificationsRequested: Bool
     var body: some View {

@@ -14,6 +14,7 @@
 
 import SwiftUI
 
+/// Half-height sheet shown when the user swipe-marks an upcoming show as attended. Allows an optional rating before confirming.
 struct MarkAttendedSheet: View {
     let show: Show
     @Bindable var viewModel: UpcomingViewModel

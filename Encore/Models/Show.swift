@@ -16,12 +16,14 @@ import Foundation
 import SwiftData
 import SwiftUI
 
+/// Tracks whether a show has been attended or is still upcoming.
 enum ShowStatus: String, Codable, CaseIterable {
     case attended
     case upcoming
-    
+
 }
 
+/// SwiftData model representing a single concert. Optional fields (rating, notes, setlist) are only populated for attended shows.
 @Model
 final class Show {
     

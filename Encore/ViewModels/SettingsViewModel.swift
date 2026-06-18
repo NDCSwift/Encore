@@ -16,6 +16,7 @@ import SwiftData
 import UserNotifications
 import Foundation
 
+/// Computes stats and handles notification permission for the Settings tab.
 @Observable
 final class SettingsViewModel {
     var notificationsEnabled = false
@@ -40,6 +41,7 @@ final class SettingsViewModel {
         return counts.max { $0.value < $1.value }?.key
     }
     
+    // Formats attended shows as plain text for the share sheet
     func exportText(_ shows: [Show]) -> String {
         let attended = shows
             .filter { $0.status == .attended }
@@ -56,15 +58,16 @@ final class SettingsViewModel {
     func requestNotificationPermission() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
             granted, _ in
-            
+            // Permission callback arrives on a background thread; hop back to main for @Observable mutation
             DispatchQueue.main.async {
                 self.notificationsEnabled = granted
             }
         }
     }
-    
+
     func checkNotificationStatus() {
         UNUserNotificationCenter.current().getNotificationSettings { settings in
+            // Same threading requirement as requestNotificationPermission
             DispatchQueue.main.async {
                 self.notificationsEnabled = settings.authorizationStatus == .authorized
             }

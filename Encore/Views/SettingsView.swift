@@ -15,6 +15,7 @@
 import SwiftUI
 import SwiftData
 
+/// Displays user stats, notification toggle, data export, and app version.
 struct SettingsView: View {
     @Query private var allShows: [Show]
     @State private var viewModel = SettingsViewModel()
@@ -31,6 +32,7 @@ struct SettingsView: View {
                 }
                 
                 Section("Notifications") {
+                    // Custom binding: get reads current auth status, set only ever enables (disabling is done in iOS Settings)
                     Toggle("Show Reminders", isOn: Binding(get: { viewModel.notificationsEnabled}, set: { enabled in
                         if enabled { viewModel.requestNotificationPermission()}}))
                 }

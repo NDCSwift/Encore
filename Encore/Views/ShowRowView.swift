@@ -15,6 +15,7 @@
 import SwiftUI
 import SwiftData
 
+/// Compact list row showing artist, venue/city, date, and optional star rating.
 struct ShowRowView: View {
     let show: Show
     var body: some View {

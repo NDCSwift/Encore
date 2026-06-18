@@ -14,6 +14,7 @@
 import Foundation
 import SwiftData
 
+/// Manages the upcoming shows list and the mark-as-attended flow.
 @Observable
 final class UpcomingViewModel {
     var showingAddSheet = false
@@ -30,6 +31,7 @@ final class UpcomingViewModel {
         context.delete(show)
     }
     
+    // Sets status, saves optional rating, then clears pending state
     func markAsAttended(_ show: Show) {
         show.status = .attended
         show.rating = pendingRating > 0 ? pendingRating : nil

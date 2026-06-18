@@ -15,6 +15,7 @@
 import SwiftUI
 import SwiftData
 
+/// Displays upcoming shows sorted by date, with swipe-to-attend and add functionality.
 struct UpcomingView: View {
     @Query(sort: \Show.date) private var allShows: [Show]
     @Environment(\.modelContext) private var modelContext

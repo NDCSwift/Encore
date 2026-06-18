@@ -16,6 +16,7 @@ import SwiftUI
 import SwiftData
 
 
+/// Lists all shows the user has marked as attended, with search and navigation to detail.
 struct AttendedView: View {
     @Query(sort: \Show.date, order: .reverse) private var allShows: [Show]
     @Environment(\.modelContext) private var modelContext

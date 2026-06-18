@@ -14,6 +14,7 @@
 
 import SwiftUI
 
+/// Root tab container with Attended, Upcoming, and Settings tabs.
 struct MainTabView: View {
     var body: some View {
     

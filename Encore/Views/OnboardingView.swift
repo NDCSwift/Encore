@@ -15,11 +15,13 @@
 import SwiftUI
 import UserNotifications
 
+/// Multi-page onboarding flow shown on first launch. Writes to AppStorage on completion to gate future launches.
 struct OnboardingView: View {
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
     @State private var currentPage = 0
     @State private var notificationsRequested = false
-    
+
+    // Static content for the first three slides; the notifications page is appended separately
     private let pages: [(icon: String, color: Color, title: String, description: String)] = [
         ("ticket.fill", .purple, "Your Concert History", "Log every show you've been to. Build a record of your live music journey"),
         ("music.microphone.circle.fill", .pink, "Every Detail Captured", "Set lists, ratings, notes - everything that made each night unforgettable."),
@@ -29,6 +31,7 @@ struct OnboardingView: View {
         currentPage == pages.count
     }
     
+    // Last page completes onboarding; all others animate to the next page
     private func advance() {
         if isLastPage {
             hasCompletedOnboarding = true
