@@ -1,6 +1,6 @@
 # Encore — Build a Real iOS App (SwiftUI + SwiftData, iOS 26)
 
-> 🎬 **Watch the full course:** [VIDEO LINK PLACEHOLDER]
+> 🎬 **[Watch the full course](https://youtu.be/iitYctFf6BE)**
 
 The finished project for the **SwiftUI Full Course 2026 — Build & Ship a Real iOS App** video. Encore is a concert-tracking app: log shows you've attended, track upcoming ones, rate setlists, and see your live-music stats — built from an empty Xcode project to a TestFlight-ready, App Store-shippable build across 11 chapters.
 
